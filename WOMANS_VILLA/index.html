@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womans_Villa</title>
+
+    <!-- Using External CSS  -->
+    <link rel="stylesheet" href="assests/style.css">
+
+    <!-- Using Bootstrap Link  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Using font-awesome Link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Using Bootstrap Icons Link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header class=" bg-dark text-white">
+        <div class="container d-flex justify-content-between p-2">
+            <div class="">Free shipping, 30-day return or refund guarantee.</div>
+            <div class="">
+                <a href="signup.html" class="mx-2 text-decoration-none">Sign UP</a>
+                <a href="signin.html" class="mx-2 text-decoration-none">Sign IN</a>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+
+    <!-- nav start -->
+    <nav class="navbar navbar-expand-lg bg-primary sticky-top bg-body-tertiary" data-bs-theme="dark">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">Womans_Villa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                    <i class="bi bi-list fs-3"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-white" href="#scrol-1">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#scrol-2">Products</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#scrol-3">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#scrol-4">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+
+
+    <!-- hero start  -->
+    <main class="hero container-fluid" id="scrol-1" data-aos="zoom-in-up">
+        <div class="content">
+            <p class="H-text">Let's <br> Explore <span> Woman's </span> Outfits</p>
+            <p class="fs-5">Make people fall in love with your clothes.</p>
+            <button type="button" class="btn btn-danger btn-lg">SHOP NOW</button>
+        </div>
+    </main>
+    <!-- hero end -->
+
+
+    <!-- section start  -->
+    <div class="container py-5" id="scrol-2" data-aos="fade-up" data-aos-duration="1000">
+        <h2 class="text-center mb-4">Explore Our Collection</h2>
+        <div class="row">
+
+            <!-- Product 1 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-warning text-dark position-absolute m-2">Dresses</span>
+                    <img src="assests/img/product-1.jpg" class="card-img-top" alt="Dress">
+                    <div class="card-body">
+                        <h5 class="card-title">Floral Dress</h5>
+                        <p class="text-muted">Elegant floral print dress for any occasion.</p>
+                        <p class="fw-bold">₹<span class="price">999</span> <del class="text-danger">₹1999</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(-1)">-</button>
+                            <span class="mx-2" id="quantity">0</span>
+                            <button class="btn btn-outline-secondary btn-sm" onclick="updateQuantity(1)">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100" onclick="addToCart()">Add to Cart</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 2 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-info text-dark position-absolute m-2">Handbags</span>
+                    <img src="assests/img/product-2.jpg" class="card-img-top" alt="Handbag">
+                    <div class="card-body">
+                        <h5 class="card-title">Leather Handbag</h5>
+                        <p class="text-muted">Premium leather handbag for a classy look.</p>
+                        <p class="fw-bold">₹1499 <del class="text-danger">₹2499</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-3.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 4 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-4.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 5 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-5.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 6 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-6.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 7 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-7.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 8 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-8.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 9 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-9.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 10 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-10.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-11.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Product 12 -->
+            <div class="col-md-4 mt-4">
+                <div class="card shadow-sm">
+                    <span class="badge bg-success text-dark position-absolute m-2">Footwear</span>
+                    <img src="assests/img/product-12.jpg" class="card-img-top" alt="Shoes">
+                    <div class="card-body">
+                        <h5 class="card-title">Stylish Heels</h5>
+                        <p class="text-muted">Trendy high heels to complete your outfit.</p>
+                        <p class="fw-bold">₹1299 <del class="text-danger">₹2299</del></p>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-outline-secondary btn-sm">-</button>
+                            <span class="mx-2">0</span>
+                            <button class="btn btn-outline-secondary btn-sm">+</button>
+                        </div>
+                        <button class="btn btn-dark mt-3 w-100">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- section end  -->
+
+
+    <!-- contact-us start  -->
+    <div class="container py-5" id="scrol-3" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <h2 class="text-center mb-4">Contact Us</h2>
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Enter your message"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-dark w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Google Map -->
+            <div class="col-md-6">
+                <div class="card p-4 shadow-sm">
+                    <h5 class="text-center">Find Us on the Map</h5>
+                    <div class="ratio ratio-16x9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345093855!2d144.95373531531586!3d-37.81627977975159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f0fda543%3A0x5045675218ce6e0!2sMelbourne%20CBD%2C%20VIC%2C%20Australia!5e0!3m2!1sen!2sus!4v1649292464563!5m2!1sen!2sus"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- contact-us end -->
+
+
+
+    <!-- about start -->
+    <section class="bg-danger text-white text-center py-5" id="scrol-4">
+        <div class="container">
+            <h1 class="fw-bold">Welcome to Womans_Villa</h1>
+            <p class="lead">Empowering Women Through Fashion</p>
+        </div>
+    </section>
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- About Image -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <img src="assests/img/ABOUT-1.jpg" class="img-fluid rounded shadow-lg" alt="About Image"
+                    style="max-width: 100%; max-height: 500px; object-fit: cover;">
+            </div>
+
+            <!-- About Content -->
+            <div class="col-md-6">
+                <h2 class="fw-bold">Who We Are</h2>
+                <p class="text-muted">Womans_Villa is your go-to destination for trendy and high-quality women’s
+                    fashion. We are dedicated to bringing the latest styles, ensuring that you always look and feel your
+                    best.</p>
+                <p>With a focus on elegance and affordability, we curate collections that celebrate femininity,
+                    confidence, and individuality.</p>
+
+                <h3 class="fw-bold">Why Choose Us?</h3>
+                <div class="row text-center">
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm border-0 p-3">
+                            <div class="fs-1 text-danger">✨</div>
+                            <h5>Premium Quality</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm border-0 p-3">
+                            <div class="fs-1 text-danger">🚚</div>
+                            <h5>Fast Delivery</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm border-0 p-3">
+                            <div class="fs-1 text-danger">💰</div>
+                            <h5>Affordable Prices</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card shadow-sm border-0 p-3">
+                            <div class="fs-1 text-danger">🛍️</div>
+                            <h5>Latest Trends</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- about end -->
+
+
+    <!-- Footer start -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-1">&copy; 2025 Womans_Villa. All rights reserved.</p>
+            <p class="mb-0">Follow us on:
+                <a href="#" class="text-white mx-2">Facebook</a> |
+                <a href="#" class="text-white mx-2">Instagram</a> |
+                <a href="#" class="text-white mx-2">Twitter</a>
+            </p>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+
+
+
+    <!-- Using Bootstrap Link  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Using External Javascript -->
+    <script src="assests/script.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
